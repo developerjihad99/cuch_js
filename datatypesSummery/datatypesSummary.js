@@ -36,3 +36,32 @@ console.log(typeof outsideTemp);
 console.log(typeof myFunction);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// **************** Stack and Heap memory in JavaScript ************************
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myFacebookname = "JihadHasan" 
+
+let anothername = myFacebookname;
+anothername = "JihadHasan123";
+
+console.log(myFacebookname);
+console.log(anothername);   //  for primitive data types, a copy of the value is created and stored in a different memory location. So, when we change the value of anothername, it does not affect myFacebookname.
+
+
+
+let userOne = {
+    email:  "jihadhasan@example.com",
+    payoneer: "user@payoneer.com"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "Jihad@example.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+// for non-primitive data types, a reference to the original value is created and stored in a different memory location. So, when we change the value of userTwo, it also changes the value of userOne because both variables are referencing the same object in memory.
